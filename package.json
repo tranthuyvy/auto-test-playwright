@@ -2,7 +2,10 @@
   "name": "auto-test",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:login": "npx playwright test tests/auth/login.spec.ts",
+    "video:convert": "find test-results -name \"*.webm\" -exec sh -c 'ffmpeg -y -i \"$1\" \"${1%.webm}.mp4\"' _ {} \\;"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
